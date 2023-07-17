@@ -1,6 +1,7 @@
 package com.hawksdev.springaula.dto;
 
 import com.hawksdev.springaula.entities.Game;
+import com.hawksdev.springaula.projections.IGameMinProjection;
 
 public class GameMinDto {
   private Long id;
@@ -18,6 +19,14 @@ public class GameMinDto {
     year = entity.getYear();
     imgUrl = entity.getImgUrl();
     shortDescription = entity.getShortDescription();
+  }
+
+  public GameMinDto(IGameMinProjection projection) {
+    id = projection.getId();
+    title = projection.getTitle();
+    year = projection.getYear();
+    imgUrl = projection.getImgUrl();
+    shortDescription = projection.getShortDescription();
   }
 
   public Long getId() {
