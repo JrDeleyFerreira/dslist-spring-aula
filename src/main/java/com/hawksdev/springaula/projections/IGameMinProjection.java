@@ -9,7 +9,7 @@ public interface IGameMinProjection {
 
   String getTitle();
 
-  int getYear();
+  int getGameYear();
 
   String getImgUrl();
 
